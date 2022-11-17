@@ -71,6 +71,11 @@
                 openPopupD(e, formTitle);
             });
         }
+        if(document.querySelector("button[id*='discordJ']") !== null){
+            document.querySelector("button[id*='discordJ']").addEventListener("click", function(e){
+                openPopupDJ(e, formTitle);
+            });
+        }
         if(document.querySelector("button[id*='twitter']") !== null){
             document.querySelector("button[id*='twitter']").addEventListener("click", function(e){
                 openPopupT(e, formTitle);
