@@ -217,6 +217,19 @@ function openPopupD(e, formTitle) {
     return false;
 }
 
+function openPopupDJ(e, formTitle) {
+    var allIds = {};
+    if(window.location.host === "vinci-onboarding-repos.github.io" || window.location.host === "vinci-prod.github.io") {  
+        href = window.location.origin + '/' + window.location.pathname.split('/')[1];
+    } else {
+        href = window.location.origin;
+    }
+    console.log(href);
+    var popup = window.open(BASE_API_URL + '/discordBot/getInviteLink?original=' + href, '', "width=400, height=400");
+
+    return false;
+}
+
 function openPopupT(e, formTitle) {
     var allIds = {};
     var href = '';
