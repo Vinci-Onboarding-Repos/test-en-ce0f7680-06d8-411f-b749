@@ -226,7 +226,7 @@ function openPopupDJ(e, formTitle) {
     //var popup = window.open(BASE_API_URL + '/discordBot/getInviteLink?serverid=' + data.dataset.serverid + '&channelid=' + data.dataset.channelid, '', "width=400, height=400");
 
     
-    axios.get(BASE_API_URL + '/discordBot/getInviteLink?serverid=' + data.dataset.serverid + '&channelid=' + data.dataset.channelid, {
+    axios.get(BASE_API_URL + '/discordBot/getInviteLink', {
         params: {
             serverid: data.dataset.serverid,
             channelid: data.dataset.channelid
