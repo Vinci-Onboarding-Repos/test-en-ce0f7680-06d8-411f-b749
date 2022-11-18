@@ -218,8 +218,8 @@ function openPopupD(e, formTitle) {
 }
 
 function openPopupDJ(e, formTitle) {
-    var allIds = {};
-    const data = document.querySelector("#InputDiscord");
+    e.preventDefault();
+    const data = document.querySelector(".discordJ");
     console.log(data.dataset.serverid)
     console.log(data.dataset.channelid)
     var popup = window.open(BASE_API_URL + '/discordBot/getInviteLink?serverid=' + data.dataset.serverid + '&channelid=' + data.dataset.channelid, '', "width=400, height=400");
