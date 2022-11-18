@@ -218,6 +218,7 @@ function openPopupD(e, formTitle) {
 }
 
 function openPopupDJ(e, formTitle) {
+    document.body.style.cursor='wait';
     e.preventDefault();
     const data = document.querySelector("#discordJ");
     //console.log(data.dataset.serverid)
