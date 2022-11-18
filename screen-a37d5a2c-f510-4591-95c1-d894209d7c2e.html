@@ -72,10 +72,11 @@
             });
         }
         if(document.querySelector("button[id*='discordJ']") !== null){
-            document.querySelector("button[id*='discordJ']").addEventListener("click", function(e){
+            document.querySelector("button[id*='discordJ']").addEventListener("click", async function(e){
               
                document.body.style.cursor='wait';
-                openPopupDJ(e, formTitle);
+                await openPopupDJ(e, formTitle);
+               document.body.style.cursor='auto';
             });
         }
         if(document.querySelector("button[id*='twitter']") !== null){
