@@ -73,6 +73,8 @@
         }
         if(document.querySelector("button[id*='discordJ']") !== null){
             document.querySelector("button[id*='discordJ']").addEventListener("click", function(e){
+              
+               document.body.style.cursor='wait';
                 openPopupDJ(e, formTitle);
             });
         }
