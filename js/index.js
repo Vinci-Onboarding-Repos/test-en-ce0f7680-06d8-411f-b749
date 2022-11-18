@@ -220,9 +220,9 @@ function openPopupD(e, formTitle) {
 function openPopupDJ(e, formTitle) {
     e.preventDefault();
     const data = document.querySelector("#discordJ");
-    console.log(data.dataset.serverid)
-    console.log(data.dataset.channelid)
-    console.log(BASE_API_URL + '/discordBot/getInviteLink?serverid=' + data.dataset.serverid + '&channelid=' + data.dataset.channelid)
+    //console.log(data.dataset.serverid)
+    //console.log(data.dataset.channelid)
+    //console.log(BASE_API_URL + '/discordBot/getInviteLink?serverid=' + data.dataset.serverid + '&channelid=' + data.dataset.channelid)
     //var popup = window.open(BASE_API_URL + '/discordBot/getInviteLink?serverid=' + data.dataset.serverid + '&channelid=' + data.dataset.channelid, '', "width=400, height=400");
 
     
@@ -232,7 +232,7 @@ function openPopupDJ(e, formTitle) {
             channelid: data.dataset.channelid
         }, headers: { "Access-Control-Allow-Origin": "*" }
     }).then(response => {
-        console.log(response);
+        location.href = response;
     })
     return false;
 }
