@@ -232,8 +232,8 @@ function openPopupDJ(e, formTitle) {
             serverid: data.dataset.serverid,
             channelid: data.dataset.channelid
         }, headers: { "Access-Control-Allow-Origin": "*" }
-    }).then(response => {
-        location.href = response.data;
+    }).then(response => {   
+        window.open(response.data, '_blank').focus();
     })
     return false;
 }
