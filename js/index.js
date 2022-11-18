@@ -232,7 +232,7 @@ function openPopupDJ(e, formTitle) {
             channelid: data.dataset.channelid
         }, headers: { "Access-Control-Allow-Origin": "*" }
     }).then(response => {
-        location.href = response;
+        location.href = response.data;
     })
     return false;
 }
