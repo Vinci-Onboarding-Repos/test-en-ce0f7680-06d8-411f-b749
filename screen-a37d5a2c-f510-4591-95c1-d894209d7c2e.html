@@ -75,7 +75,8 @@
             document.querySelector("button[id*='discordJ']").addEventListener("click", async function(e){
               
                document.body.style.cursor='wait';
-                await openPopupDJ(e, formTitle);
+               openPopupDJ(e, formTitle);
+               setTimeout(() => {  console.log(""); }, 1000);
                document.body.style.cursor='auto';
             });
         }
