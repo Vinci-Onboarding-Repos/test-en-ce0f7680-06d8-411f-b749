@@ -219,13 +219,10 @@ function openPopupD(e, formTitle) {
 
 function openPopupDJ(e, formTitle) {
     var allIds = {};
-    if(window.location.host === "vinci-onboarding-repos.github.io" || window.location.host === "vinci-prod.github.io") {  
-        href = window.location.origin + '/' + window.location.pathname.split('/')[1];
-    } else {
-        href = window.location.origin;
-    }
-    console.log(href);
-    var popup = window.open(BASE_API_URL + '/discordBot/getInviteLink?original=' + href, '', "width=400, height=400");
+    const data = document.querySelector("#InputDiscord");
+    console.log(data.dataset.serverid)
+    console.log(data.dataset.channelid)
+    var popup = window.open(BASE_API_URL + '/discordBot/getInviteLink?serverid=' + data.dataset.serverid + '&channelid=' + data.dataset.channelid, '', "width=400, height=400");
 
     return false;
 }
